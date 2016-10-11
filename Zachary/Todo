@@ -1,0 +1,18 @@
+The question is in C programming..Q1) Write a C program (main) that would do 
+the following: Read two integers A and B. A can be positive or negative. Then 
+the program writes (in 1’s and 0’s) the binary representation of A as stored in 
+the computer. B variable dictates the number of bits you would assume that 
+value A is stored in. Remember, that we use 2’s complement form to store values 
+in computers. 
+
+Examples: A is 13, B is 18. Then it should show 000000000000001101 A is 126, 
+B is 10. Then it should show 0001111110 A is -2, B is 18. Then it should show 
+111111111111111110 A is -1, B is 12. Then it should show 111111111111
+
+Hint: Use a for loop with B, int to hold A, show bit values which are the 
+rightmost B bits of the int that holds A. Note that you need to start writing 
+from leftmost bit (B decides how many) to rightmost bit. Need to use a “mask 
+bit” and AND (& operation) of that mask and A value.  Make mask =1, then in 
+aloop shift it to left B (or B-1) times, to start off. Add another loop (B 
+times or mask is not zero) to check each bit value (0 or 1) after ANDing mask 
+and A. Each time mask is shifted right.
